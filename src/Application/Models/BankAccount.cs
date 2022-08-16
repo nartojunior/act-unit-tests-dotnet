@@ -29,15 +29,30 @@ public class BankAccount
     public void Withdraw(double value)
     {
         //TODO.: se o valor for menor igual a zero, lançar uma exceção
+        if (value <= 0)
+            throw new ArgumentException();
+
         //TODO.: se a conta não tiver saldo suficiente, lançar uma exceção
+        if (value > this.Balance)
+            throw new ArgumentException();
+
         //TODO.: se a conta tiver saldo suficiente, debitar o valor do saldo
+        this.Balance -= value;
     }
 
     public void Transfer(BankAccount bankAccount, double value)
     {
         //TODO.: se o valor for menor igual a zero, lançar uma exceção
+        if (value <= 0)
+            throw new ArgumentException();
+
         //TODO.: se a conta não tiver saldo suficiente, lançar uma exceção
+        if (value > bankAccount.Balance)
+            throw new ArgumentException();
+
         //TODO.: se a conta tiver saldo suficiente, debitar o valor do saldo e realizar deposito
         // na BankAccount beneficiaryAccount
+        this.Balance -= value;
+        bankAccount.Balance += value;
     }
 }

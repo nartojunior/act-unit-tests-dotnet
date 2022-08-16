@@ -12,7 +12,7 @@ public class BankAccountStepDefs
     [Given(@"um BankAccount com saldo de R\$ (.*)")]
     public void GivenUmBankAccountComSaldoDeR(decimal p0)
     {
-        _bankAccount = new BankAccount(123456, 123, 0);
+        _bankAccount = new BankAccount(123456, 123, (double) p0);
     }
 
     [When(@"depositar R\$ (.*)")]
