@@ -1,9 +1,14 @@
+using Application.Models;
+
 namespace SpecFlowTests.StepDefinitions
 {
     [Binding]
     public sealed class CalculatorStepDefinitions
     {
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
+
+        private readonly Calculator _calc = new();
+        private int _result = 0;
 
         [Given("the first number is (.*)")]
         public void GivenTheFirstNumberIs(int number)
@@ -14,7 +19,7 @@ namespace SpecFlowTests.StepDefinitions
             // additional string/Table parameters can be defined on the step definition
             // method. 
 
-            throw new PendingStepException();
+            _calc.FirstNumber = number;
         }
 
         [Given("the second number is (.*)")]
@@ -22,7 +27,7 @@ namespace SpecFlowTests.StepDefinitions
         {
             //TODO: implement arrange (precondition) logic
 
-            throw new PendingStepException();
+            _calc.SecondNumber = number;
         }
 
         [When("the two numbers are added")]
@@ -30,15 +35,14 @@ namespace SpecFlowTests.StepDefinitions
         {
             //TODO: implement act (action) logic
 
-            throw new PendingStepException();
+            _result = _calc.Add();
         }
 
         [Then("the result should be (.*)")]
         public void ThenTheResultShouldBe(int result)
         {
             //TODO: implement assert (verification) logic
-
-            throw new PendingStepException();
+            _result.Should().Be(result);
         }
     }
 }

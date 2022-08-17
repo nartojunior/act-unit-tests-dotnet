@@ -28,7 +28,7 @@ namespace SpecFlowTests.Features
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "BankAccount.feature"
+#line 1 "Calculator.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
