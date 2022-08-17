@@ -50,7 +50,7 @@ public class BankAccount
         if (bankAccount is null)
             throw new ArgumentException();
 
-        if (value > bankAccount.Balance)
+        if (value > this.Balance)
             throw new ArgumentException();
 
         //TODO.: se a conta tiver saldo suficiente, debitar o valor do saldo e realizar deposito

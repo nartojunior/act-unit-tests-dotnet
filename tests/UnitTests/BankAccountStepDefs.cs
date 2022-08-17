@@ -44,7 +44,7 @@ public class BankAccountStepDefs
     [When(@"tranferir R\$ (.*) para o BankAccount de destino")]
     public void WhenTranferirRParaOBankAccountDeDestino(Decimal p0)
     {
-        _bankAccount?.Transfer(_bankAccountRecept, (double)p0);
+        _bankAccount?.Transfer(_bankAccountRecept, (double) p0);
     }
 
     [Then(@"o saldo do BankAccount de destino deve ser R\$ (.*)")]

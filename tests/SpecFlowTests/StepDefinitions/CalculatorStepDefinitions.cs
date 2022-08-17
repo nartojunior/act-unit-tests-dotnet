@@ -44,5 +44,12 @@ namespace SpecFlowTests.StepDefinitions
             //TODO: implement assert (verification) logic
             _result.Should().Be(result);
         }
+
+        [When(@"the two numbers are subtracted")]
+        public void WhenTheTwoNumbersAreSubtracted()
+        {
+            _result = _calc.Sub();
+        }
+
     }
 }
