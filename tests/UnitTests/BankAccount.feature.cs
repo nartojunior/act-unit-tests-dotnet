@@ -188,7 +188,7 @@ namespace UnitTests
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Transferencia em um BankAccount com saldo", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 21
-    this.ScenarioInitialize(scenarioInfo);
+   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -198,19 +198,19 @@ namespace UnitTests
             {
                 await this.ScenarioStartAsync();
 #line 22
-        await testRunner.GivenAsync("um BankAccount com saldo de R$ 100,00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+       await testRunner.GivenAsync("um BankAccount com saldo de R$ 100,00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line hidden
 #line 23
-        await testRunner.AndAsync("um BankAccount de destino com saldo de R$ 0,00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+       await testRunner.AndAsync("um BankAccount de destino com saldo de R$ 0,00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 24
-        await testRunner.WhenAsync("tranferir R$ 50,00 para o BankAccount de destino", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+       await testRunner.WhenAsync("tranferir R$ 50,00 para o BankAccount de destino", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line hidden
 #line 25
-        await testRunner.ThenAsync("o saldo do BankAccount deve ser R$ 50,00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
+       await testRunner.ThenAsync("o saldo do BankAccount deve ser R$ 50,00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
 #line hidden
 #line 26
-        await testRunner.AndAsync("o saldo do BankAccount de destino deve ser R$ 50,00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+       await testRunner.AndAsync("o saldo do BankAccount de destino deve ser R$ 50,00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

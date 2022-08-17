@@ -47,6 +47,9 @@ public class BankAccount
             throw new ArgumentException();
 
         //TODO.: se a conta não tiver saldo suficiente, lançar uma exceção
+        if (bankAccount is null)
+            throw new ArgumentException();
+
         if (value > bankAccount.Balance)
             throw new ArgumentException();
 

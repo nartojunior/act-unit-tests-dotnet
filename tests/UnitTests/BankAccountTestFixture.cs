@@ -8,6 +8,6 @@ public class BankAccountTestFixture
 
     public BankAccountTestFixture()
     {
-        BankAccount = new BankAccount(123456, 123, 0);
+        BankAccount = new BankAccount(123456, 123, 10);
     }
 }
